@@ -19,3 +19,6 @@ GC_CONTENT <- function(sequence){
   gc_content <- (Gs + Cs) / str_length(sequence) * 100
   return(gc_content)
 }
+
+#7 Pulling and Pushing
+
