@@ -20,5 +20,17 @@ GC_CONTENT <- function(sequence){
   return(gc_content)
 }
 
+
 #7 Pulling and Pushing
+
+library(stringr)
+get_size_class <- function(ear_length){
+   # Calculate the size class for one or more earth lengths
+   ear_lengths <- ifelse(ear_length > 10, "large", "small")
+   return(ear_lengths)
+}
+
+ear_length_class <- sapply(main_data$earlength, get_size_class)
+gc_content <- sapply(main_data$dnaseq, GC_CONTENT)
+data_frame_info <- data.frame(main_data$id, ear_length_class, gc_content)
 
